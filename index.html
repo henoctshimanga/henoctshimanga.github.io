@@ -139,22 +139,26 @@
                 </div>
                 <div class="comparison-grid">
                     <article class="comparison-panel">
-                        <h3>Original Artifact</h3>
-                        <p>The original SmartCourse Finder was a C++ console system that loaded course data from files, held course structures in memory, and displayed prerequisites through a text interface.</p>
+                        <h3>Original Version</h3>
+                        <p>Built as a C++ console-based application, the original SmartCourse Finder loaded course data from files, stored information in memory, and provided basic search and display functionality.</p>
                         <ul class="detail-list">
-                            <li>Console interaction and file-based course data</li>
-                            <li>In-memory course storage</li>
-                            <li>Search and prerequisite presentation</li>
+                            <li>Built in C++ as a console-based application</li>
+                            <li>Loaded course data from a file</li>
+                            <li>Stored data in memory</li>
+                            <li>Basic search and display functionality</li>
+                            <li>Limited scalability and no persistence</li>
                         </ul>
                     </article>
                     <article class="comparison-panel enhanced">
-                        <h3>Enhanced Artifact</h3>
-                        <p>The improved version is a full-stack application with React UI, Spring Boot services, MySQL persistence, theme support, and graph-based prerequisite validation.</p>
+                        <h3>Enhanced Version</h3>
+                        <p>Transformed into a full-stack application using React and Spring Boot, featuring a modern REST API, persistent MySQL database, and graph-based prerequisite management with improved UI/UX.</p>
                         <ul class="detail-list">
-                            <li>React frontend with theme toggle</li>
-                            <li>Spring Boot backend and REST API</li>
-                            <li>MySQL persistence through JPA/Hibernate</li>
-                            <li>Graph logic for prerequisite traversal</li>
+                            <li>Full-stack application using React and Spring Boot</li>
+                            <li>REST API for backend communication</li>
+                            <li>MySQL database with JPA/Hibernate</li>
+                            <li>Graph-based prerequisite management</li>
+                            <li>Supports CRUD operations and course validation</li>
+                            <li>Improved UI/UX with theme toggle and state persistence</li>
                         </ul>
                     </article>
                 </div>
@@ -173,11 +177,12 @@
         <section id="design" class="section narrative reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Software Design</span>
-                    <h2>Design & Engineering</h2>
+                    <span class="eyebrow">Software Design & Architecture</span>
+                    <h2>Design, Engineering & Architecture</h2>
                 </div>
                 <div class="narrative-grid">
                     <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Design Principles</h4>
                         <p>The original C++ console design was a functional foundation, but the enhanced solution required a more sustainable architecture. The full-stack redesign introduced stronger separation of concerns, better usability, and a maintainable codebase.</p>
                         <ul class="detail-list">
                             <li>Original C++ design used file flow and text output for simple course advising.</li>
@@ -191,6 +196,17 @@
                             <a href="#" class="link-btn">Enhanced Code</a>
                             <a href="#" class="link-btn">Narrative Document</a>
                         </div>
+                    </article>
+                    <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Layered Architecture</h4>
+                        <p>The enhanced system follows a layered full-stack architecture that separates concerns across presentation, business logic, and data layers.</p>
+                        <ul class="detail-list">
+                            <li><strong>Frontend (React):</strong> Handles user interaction, state management, and UI rendering</li>
+                            <li><strong>Backend (Spring Boot):</strong> Provides RESTful APIs, business logic, and validation</li>
+                            <li><strong>Database (MySQL):</strong> Stores course and prerequisite data persistently</li>
+                            <li><strong>Application Logic:</strong> Uses graph-based structures to manage relationships and enforce rules</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--muted);">This separation of concerns improves scalability, maintainability, and testability across the entire system.</p>
                     </article>
                 </div>
             </div>
