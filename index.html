@@ -125,8 +125,11 @@
                     </article>
                 </div>
                 <div class="video-placeholder">
-                    <a href="#" class="btn btn-secondary">View Code Review Video</a>
-                    <p>Placeholder: replace with your code review video link (YouTube, Vimeo, or hosted)</p>
+                    <video class="review-video" controls preload="metadata">
+                        <source src="media/CodeReview.mov" type="video/quicktime">
+                        <a href="media/CodeReview.mov">View Code Review Video</a>
+                    </video>
+                    <a href="media/CodeReview.mov" class="btn btn-secondary">Open Code Review Video</a>
                 </div>
             </div>
         </section>
@@ -379,7 +382,7 @@
                 </div>
                 <p class="section-intro">Quick access to the main project assets and supporting documentation for review and capstone evaluation.</p>
                 <div class="asset-grid">
-                    <a href="#" class="asset-card">Code Review Video</a>
+                    <a href="media/CodeReview.mov" class="asset-card">Code Review Video</a>
                     <a href="#" class="asset-card">Original Artifact</a>
                     <a href="#" class="asset-card">Enhanced Artifact</a>
                     <a href="#" class="asset-card">Software Design Narrative</a>
