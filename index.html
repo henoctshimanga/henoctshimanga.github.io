@@ -174,6 +174,28 @@
             </div>
         </section>
 
+        <section class="section narrative reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Core Capabilities</span>
+                    <h2>Key Features</h2>
+                </div>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <ul class="detail-list">
+                            <li>Import and manage course data</li>
+                            <li>Search courses by prefix</li>
+                            <li>View course details and prerequisites</li>
+                            <li>Create, update, and delete courses</li>
+                            <li>Generate valid course order using topological sorting</li>
+                            <li>Explore prerequisite relationships using graph traversal</li>
+                            <li>Light/Dark mode with persistent state</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="design" class="section narrative reveal">
             <div class="container">
                 <div class="section-header">
@@ -215,23 +237,34 @@
         <section id="algorithms" class="section narrative reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Algorithms</span>
-                    <h2>Data Structures & Logic</h2>
+                    <span class="eyebrow">Algorithms & Data Structures</span>
+                    <h2>Graph-Based Logic</h2>
                 </div>
                 <div class="narrative-grid">
                     <article class="narrative-card">
-                        <p>The original flat lookup approach was sufficient for basic search but not for modeling course dependency complexity. The enhanced artifact uses graph-based structures to better represent prerequisites and support advanced validation.</p>
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Graph-Based Approach</h4>
+                        <p>The system uses graph-based data structures to model course relationships. Each course is treated as a node, and prerequisites are represented as directed edges. This approach improves accuracy and scalability compared to a flat lookup model.</p>
                         <ul class="detail-list">
                             <li>Flat lookup could not easily support multi-step prerequisite resolution or cycle detection.</li>
                             <li>Graph-based course relationships capture dependencies naturally and support traversal.</li>
                             <li>Prerequisite traversal validates course sequences and supports logical progression.</li>
                             <li>Topological ordering helps identify valid course pathways and detect dependency cycles.</li>
-                            <li>The enhanced logic is more structured, maintainable, and aligned with advising needs.</li>
                         </ul>
                         <div class="card-links">
                             <a href="#" class="link-btn">Artifact Code</a>
                             <a href="#" class="link-btn">Narrative Document</a>
                         </div>
+                    </article>
+                    <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Algorithms in Action</h4>
+                        <p>The application implements several key algorithms to ensure correctness and performance:</p>
+                        <ul class="detail-list">
+                            <li><strong>Validate prerequisite relationships:</strong> Ensures courses reference valid prerequisites</li>
+                            <li><strong>Detect cycles:</strong> Identifies circular dependencies that would create impossible sequences</li>
+                            <li><strong>Topological sorting:</strong> Generates valid course order respecting all prerequisites</li>
+                            <li><strong>Graph traversal:</strong> Uses depth-first and breadth-first search to explore dependencies</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--muted);">This algorithmic foundation strengthens the system's ability to handle complex prerequisite scenarios and provide reliable course planning recommendations.</p>
                     </article>
                 </div>
             </div>
@@ -240,24 +273,66 @@
         <section id="databases" class="section narrative reveal">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Databases</span>
-                    <h2>Persistence & Schema</h2>
+                    <span class="eyebrow">Database Design</span>
+                    <h2>Persistence & Schema Migration</h2>
                 </div>
                 <div class="narrative-grid">
                     <article class="narrative-card">
-                        <p>The persistence layer matured from H2 testing to MySQL with Hibernate/JPA. This progression highlights the difference between structured data storage and the application layer, which enforces graph-based prerequisite rules.</p>
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Migration from H2 to MySQL</h4>
+                        <p>The database layer was enhanced by transitioning from an H2 in-memory database to a MySQL database using Spring Data JPA and Hibernate. This progression demonstrates moving from rapid prototyping to production-grade persistence.</p>
                         <ul class="detail-list">
                             <li>The initial H2 implementation supported rapid iteration and backend validation.</li>
                             <li>Migration to MySQL introduced durable storage, schema management, and production relevance.</li>
                             <li>JPA/Hibernate persistence maps course entities and prerequisite relationships with auto-generated schema.</li>
-                            <li>The current schema includes <code>courses</code> and <code>course_prerequisites</code> tables with validation for required fields and order.</li>
-                            <li>The database stores structured records while graph logic enforces advanced prerequisite validation.</li>
                             <li>Resolving Hibernate/MySQL configuration issues reinforced proper persistence setup and compatibility awareness.</li>
                         </ul>
                         <div class="card-links">
                             <a href="#" class="link-btn">Artifact Code</a>
                             <a href="#" class="link-btn">Narrative Document</a>
                         </div>
+                    </article>
+                    <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Schema Design</h4>
+                        <p>The schema reflects a clear separation between structured data storage and application-level logic. While the database stores fundamental records, complex operations are handled in the application layer.</p>
+                        <ul class="detail-list">
+                            <li><strong>Courses table:</strong> Stores course_number, course_title, and core course metadata</li>
+                            <li><strong>Course prerequisites table:</strong> Links courses to their prerequisites using foreign keys</li>
+                            <li>Validation for required fields and referential integrity enforced at the database level</li>
+                            <li>Cycle detection and dependency validation handled in the application layer using graph algorithms</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--muted);">This design reflects an important trade-off: the database provides structured storage, while the application layer handles advanced problem-solving logic.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section narrative reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Professional Growth</span>
+                    <h2>Challenges & Learning</h2>
+                </div>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Configuration & Integration Challenges</h4>
+                        <p>One of the main challenges in this project was configuring the database layer, particularly ensuring compatibility between MySQL and Hibernate. Small configuration issues, such as incorrect dialect settings, prevented the application from starting and required careful troubleshooting.</p>
+                        <ul class="detail-list">
+                            <li>Identified and resolved Hibernate dialect mismatches between development and production databases</li>
+                            <li>Debugged JDBC connectivity issues and datasource configuration problems</li>
+                            <li>Learned the importance of environment-specific configuration and property management</li>
+                            <li>Understood how framework dependencies interact with underlying database systems</li>
+                        </ul>
+                    </article>
+                    <article class="narrative-card">
+                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Key Takeaways</h4>
+                        <p>This experience reinforced critical lessons about system design and integration:</p>
+                        <ul class="detail-list">
+                            <li>Backend, database, and application layers must interact seamlessly for system success</li>
+                            <li>Not all complex logic should be handled at the database level; application-level processing is often necessary</li>
+                            <li>Configuration management and environment-specific settings are crucial in real-world applications</li>
+                            <li>Systematic troubleshooting and attention to error messages are essential development skills</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--muted);">These challenges transformed my understanding of full-stack development from theoretical to practical, reinforcing the importance of careful system design and integration testing.</p>
                     </article>
                 </div>
             </div>
