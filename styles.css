@@ -86,6 +86,10 @@ header {
     color: #3498db;
 }
 
+.nav-menu a.active {
+    color: #2980b9;
+}
+
 /* Hamburger menu for mobile */
 .hamburger {
     display: none;
@@ -165,6 +169,69 @@ header {
     border-radius: 50%;
     border: 5px solid #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.assessment-list,
+.detail-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.assessment-list li,
+.detail-list li {
+    padding-left: 1.4rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.assessment-list li::before,
+.detail-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.artifact-grid,
+.projects-grid,
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.artifact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.artifact-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.artifact-card h3,
+.project-card h3,
+.skill-category h3 {
+    color: #2c3e50;
+}
+
+.artifact-card p,
+.skill-category p,
+.project-card p {
+    margin-bottom: 1rem;
+    color: #555;
 }
 
 /* Skills section */

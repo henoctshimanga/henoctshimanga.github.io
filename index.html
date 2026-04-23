@@ -17,12 +17,14 @@
                 </div>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#assessment">Assessment</a></li>
+                    <li><a href="#artifact">Artifact</a></li>
+                    <li><a href="#review">Enhancements</a></li>
+                    <li><a href="#outcomes">Outcomes</a></li>
+                    <li><a href="#growth">Growth</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger">
+                <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -34,80 +36,121 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Computer Science Student | CS 499 Capstone Project</p>
-                <a href="#about" class="btn">Learn More</a>
+                <p class="eyebrow">CS 499 Capstone ePortfolio</p>
+                <h2>SmartCourse Finder</h2>
+                <p>A polished capstone presentation that captures professional reflection, growth, and the full evolution of a course advising artifact.</p>
+                <a href="#assessment" class="btn">Read the Assessment</a>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="assessment" class="about">
             <div class="container">
-                <h2>About Me</h2>
+                <h2>Professional Self-Assessment</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hello! I'm a dedicated computer science student working on my capstone project. This portfolio showcases my skills, projects, and passion for technology.</p>
-                        <p>With a strong foundation in programming and problem-solving, I strive to create innovative solutions and contribute to the field of computer science.</p>
+                        <p>This portfolio presents my CS 499 capstone as an employable, credible effort that is more than a file dump. It begins with my self-assessment, then connects the artifact, code review, enhancements, outcome alignment, and growth.</p>
+                        <ul class="assessment-list">
+                            <li>I position myself as a Full-Stack software engineer with a strong interest in DevOps, data engineering, and a future path toward cybersecurity.</li>
+                            <li>I evaluate the project for maintainability, architecture, user value, and technical maturity while highlighting the original and enhanced artifacts.</li>
+                            <li>My professional goal is to deliver solutions with clear narrative, strong engineering judgment, and relevance to industry trends.</li>
+                        </ul>
                     </div>
                     <div class="about-image">
-                        <img src="media/profile-placeholder.jpg" alt="Profile picture" width="200" height="200">
+                        <img src="media/profile-placeholder.jpg" alt="Professional portrait placeholder" width="220" height="220">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <section id="artifact" class="artifact">
             <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                            <li>C++</li>
+                <h2>Main Artifact</h2>
+                <div class="artifact-grid">
+                    <article class="artifact-card">
+                        <h3>Original SmartCourse Finder</h3>
+                        <p>Developed in C++ as a console-based course management and advising system. It loaded course data from a file, stored courses in memory, displayed available courses, and supported course lookup and prerequisite viewing.</p>
+                        <ul class="detail-list">
+                            <li>File-backed course data ingestion</li>
+                            <li>In-memory storage and retrieval</li>
+                            <li>Search and prerequisite display</li>
                         </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Web Technologies</h3>
-                        <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>React</li>
-                            <li>Node.js</li>
+                    </article>
+                    <article class="artifact-card">
+                        <h3>Enhanced SmartCourse Finder</h3>
+                        <p>Rebuilt into a full-stack application using React frontend and Spring Boot backend. It now supports persistent theme state, graph-based prerequisite logic, MySQL/JPA persistence, and robust validation rules.</p>
+                        <ul class="detail-list">
+                            <li>React UI with light/dark mode toggle</li>
+                            <li>Spring Boot backend with RESTful services</li>
+                            <li>MySQL database via Hibernate/JPA</li>
                         </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Frameworks</h3>
-                        <ul>
-                            <li>Git</li>
-                            <li>Docker</li>
-                            <li>AWS</li>
-                            <li>Linux</li>
-                        </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="review" class="projects">
             <div class="container">
-                <h2>Projects</h2>
+                <h2>Code Review & Enhancements</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of the first project. This is a placeholder for your actual project details.</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Frontend Enhancements</h3>
+                        <p>Added theme persistence and modern UI patterns with React. Verified the build with <code>npm run build</code> to ensure the user experience is stable and production-ready.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of the second project. This is a placeholder for your actual project details.</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Backend Enhancements</h3>
+                        <p>Implemented Spring Data JPA repositories, validation logic, and MySQL persistence. I resolved a MySQL/Hibernate dialect compatibility startup issue, which reinforced the importance of accurate database configuration.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Description of the third project. This is a placeholder for your actual project details.</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Algorithmic Enhancements</h3>
+                        <p>Moved beyond flat lookups by modeling course relationships as a graph. The system supports prerequisite validation, traversal logic, cycle rejection, and topological ordering for course dependency analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="outcomes" class="skills">
+            <div class="container">
+                <h2>Program Outcomes Alignment</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Software Design & Engineering</h3>
+                        <p>Designed a maintainable full-stack architecture with clear separation of frontend, backend, and persistence layers.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Algorithms & Data Structures</h3>
+                        <p>Applied graph-based logic, DFS/BFS traversal, and topological sort to manage course prerequisites and detect invalid dependency cycles.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <p>Built a MySQL schema with Hibernate/JPA, enforced referential integrity, and applied validation rules for data quality.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Professional Practice</h3>
+                        <p>Documented a cohesive narrative and reflected critically on technical decisions, compatibility issues, and project evolution.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Quality & Validation</h3>
+                        <p>Verified frontend builds, enforced business rules, blocked invalid deletions, and rejected prerequisite cycles to preserve system integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="growth" class="contact">
+            <div class="container">
+                <h2>Growth Highlights</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Software Design</h3>
+                        <p>Improved system architecture, increased modularity, and built an application that reflects professional engineering standards.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Algorithms & Data Structures</h3>
+                        <p>Enhanced course dependency handling with graph traversal, validation, and ordering techniques that extend beyond simple lookup tables.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <p>Transitioned from in-memory testing to MySQL persistence, including schema design, JPA mapping, and practical understanding of database configuration.</p>
                     </div>
                 </div>
             </div>

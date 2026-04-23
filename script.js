@@ -19,6 +19,15 @@ function initMobileMenu() {
         hamburger.classList.toggle('active');
     });
 
+    // Toggle mobile menu with keyboard controls
+    hamburger.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    });
+
     // Close mobile menu when a link is clicked
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
@@ -86,6 +95,7 @@ function initScrollEffects() {
 
     // Add scroll event listener for navigation highlighting
     window.addEventListener('scroll', highlightNavLink);
+    highlightNavLink();
 
     // Smooth scroll for navigation links (fallback for older browsers)
     navLinks.forEach(link => {
