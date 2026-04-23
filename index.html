@@ -3,6 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCourse Finder | CS 499 ePortfolio</title>
+    <meta name="description" content="CS 499 capstone ePortfolio presenting SmartCourse Finder, code review, design analysis, and program outcomes.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body data-theme="light">
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="brand">
+                <span class="eyebrow">CS 499 Capstone</span>
+                <a href="#hero" class="logo-link">SmartCourse Finder ePortfolio</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Dark Mode</button>
+                <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <nav class="site-nav" id="navbar">
+            <div class="container nav-menu-wrap">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#assessment">Assessment</a></li>
+                    <li><a href="#review">Code Review</a></li>
+                    <li><a href="#artifact">Artifact</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#algorithms">Algorithms</a></li>
+                    <li><a href="#databases">Databases</a></li>
+                    <li><a href="#outcomes">Outcomes</a></li>
+                    <li><a href="#deliverables">Assets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section reveal">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Capstone Portfolio</span>
+                    <h1>Your Name</h1>
+                    <p class="subtitle">Computer Science ePortfolio focused on Full-Stack, DevOps, and software engineering professionalism.</p>
+                    <p class="hero-intro">SmartCourse Finder documents my capstone journey from a C++ console prototype to a full-stack React and Spring Boot application with real persistence, advanced prerequisite logic, and professional quality control.</p>
+                    <div class="hero-actions">
+                        <a href="#review" class="btn">View Code Review</a>
+                        <a href="#artifact" class="btn btn-secondary">View Artifacts</a>
+                        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                        <a href="#deliverables" class="btn btn-secondary">Resume</a>
+                    </div>
+                    <div class="badge-row">
+                        <span class="badge">Full-Stack</span>
+                        <span class="badge">DevOps</span>
+                        <span class="badge">Data Structures</span>
+                        <span class="badge">Database Design</span>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="panel-card">
+                        <h3>Project Snapshot</h3>
+                        <p>A professional capstone portfolio demonstrating how SmartCourse Finder evolved into a robust advising system with polished narrative and technical evidence.</p>
+                        <div class="stats-grid">
+                            <div>
+                                <span>3</span>
+                                <p>Core artifacts</p>
+                            </div>
+                            <div>
+                                <span>5</span>
+                                <p>Program outcomes</p>
+                            </div>
+                            <div>
+                                <span>9</span>
+                                <p>Portfolio sections</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="section about reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Professional Self-Assessment</span>
+                    <h2>Self-Assessment</h2>
+                </div>
+                <div class="content-card">
+                    <p>This assessment highlights the professional thinking behind my capstone work. It connects coursework, collaboration, stakeholder communication, technical growth, and the way the artifacts support each other.</p>
+                    <ul class="assessment-list">
+                        <li>I grew through coursework by applying software engineering principles, systems design, and methodical testing to a real-world capstone artifact.</li>
+                        <li>Collaboration and communication were essential: I translated stakeholder needs into technical requirements, reviewed progress with peers, and documented decisions clearly.</li>
+                        <li>Data structures and algorithms are central to the enhanced artifact, with graph-based course modeling, prerequisite traversal, and cycle detection reinforcing correctness.</li>
+                        <li>Software engineering improvements include frontend/backend separation, modular component design, API validation, and a consistent, maintainable architecture.</li>
+                        <li>Database design advanced from H2 testing to MySQL persistence with JPA/Hibernate, schema validation, and real configuration troubleshooting.</li>
+                        <li>A security mindset is embedded in the artifact through validation rules, invalid state prevention, and thoughtful persistence handling.</li>
+                    </ul>
+                    <p class="assessment-summary">Together, the original and enhanced artifacts work as a unified portfolio. The original prototype provides a technical foundation, and the enhanced full-stack application demonstrates professional growth, usability, and system maturity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="review" class="section review reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Code Review</span>
+                    <h2>Review Summary</h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Purpose</h3>
+                        <p>This review evaluates current capabilities, identifies opportunities for improvement, and supports a professional presentation ready for instructors and employers.</p>
+                        <span class="pill">Review focus</span>
+                    </article>
+                    <article class="project-card">
+                        <h3>Current Functionality</h3>
+                        <p>The artifact manages courses, prerequisites, theme state, and full-stack data flow between React, Spring Boot, and MySQL.</p>
+                        <span class="pill">Functionality</span>
+                    </article>
+                    <article class="project-card">
+                        <h3>Improvement Plan</h3>
+                        <p>Recommended work includes stronger error handling, documented API behavior, enhanced user guidance, and robust validation across the application.</p>
+                        <span class="pill">Next steps</span>
+                    </article>
+                </div>
+                <div class="video-placeholder">
+                    <a href="#" class="btn btn-secondary">Watch Review Video</a>
+                    <p>Placeholder link: replace with final video or external demonstration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="artifact" class="section artifact reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Artifact Overview</span>
+                    <h2>Main Project</h2>
+                </div>
+                <div class="comparison-grid">
+                    <article class="comparison-panel">
+                        <h3>Original Artifact</h3>
+                        <p>The original SmartCourse Finder was a C++ console system that loaded course data from files, held course structures in memory, and displayed prerequisites through a text interface.</p>
+                        <ul class="detail-list">
+                            <li>Console interaction and file-based course data</li>
+                            <li>In-memory course storage</li>
+                            <li>Search and prerequisite presentation</li>
+                        </ul>
+                    </article>
+                    <article class="comparison-panel enhanced">
+                        <h3>Enhanced Artifact</h3>
+                        <p>The improved version is a full-stack application with React UI, Spring Boot services, MySQL persistence, theme support, and graph-based prerequisite validation.</p>
+                        <ul class="detail-list">
+                            <li>React frontend with theme toggle</li>
+                            <li>Spring Boot backend and REST API</li>
+                            <li>MySQL persistence through JPA/Hibernate</li>
+                            <li>Graph logic for prerequisite traversal</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="timeline-card">
+                    <h3>Project Evolution</h3>
+                    <ol class="timeline-list">
+                        <li><strong>Initial prototype:</strong> C++ console-based course advising system.</li>
+                        <li><strong>Full-stack redesign:</strong> Separated frontend and backend for maintainability.</li>
+                        <li><strong>Algorithm enhancement:</strong> Added graph-based prerequisite traversal and topological ordering.</li>
+                        <li><strong>Database migration:</strong> Moved from H2 to MySQL with JPA/Hibernate persistence.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="design" class="section narrative reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Software Design</span>
+                    <h2>Design & Engineering</h2>
+                </div>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The original C++ console design was a functional foundation, but the enhanced solution required a more sustainable architecture. The full-stack redesign introduced stronger separation of concerns, better usability, and a maintainable codebase.</p>
+                        <ul class="detail-list">
+                            <li>Original C++ design used file flow and text output for simple course advising.</li>
+                            <li>Transitioned to a full-stack web application to support real deployment and UX improvements.</li>
+                            <li>Separated frontend and backend logic to improve maintainability and extensibility.</li>
+                            <li>Introduced reusable, modular components and API boundaries for cleaner engineering.</li>
+                            <li>Added usability improvements such as a modern interface and theme toggle for preference support.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Original Code</a>
+                            <a href="#" class="link-btn">Enhanced Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="algorithms" class="section narrative reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Algorithms</span>
+                    <h2>Data Structures & Logic</h2>
+                </div>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The original flat lookup approach was sufficient for basic search but not for modeling course dependency complexity. The enhanced artifact uses graph-based structures to better represent prerequisites and support advanced validation.</p>
+                        <ul class="detail-list">
+                            <li>Flat lookup could not easily support multi-step prerequisite resolution or cycle detection.</li>
+                            <li>Graph-based course relationships capture dependencies naturally and support traversal.</li>
+                            <li>Prerequisite traversal validates course sequences and supports logical progression.</li>
+                            <li>Topological ordering helps identify valid course pathways and detect dependency cycles.</li>
+                            <li>The enhanced logic is more structured, maintainable, and aligned with advising needs.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Artifact Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="databases" class="section narrative reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Databases</span>
+                    <h2>Persistence & Schema</h2>
+                </div>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The persistence layer matured from H2 testing to MySQL with Hibernate/JPA. This progression highlights the difference between structured data storage and the application layer, which enforces graph-based prerequisite rules.</p>
+                        <ul class="detail-list">
+                            <li>The initial H2 implementation supported rapid iteration and backend validation.</li>
+                            <li>Migration to MySQL introduced durable storage, schema management, and production relevance.</li>
+                            <li>JPA/Hibernate persistence maps course entities and prerequisite relationships with auto-generated schema.</li>
+                            <li>The current schema includes <code>courses</code> and <code>course_prerequisites</code> tables with validation for required fields and order.</li>
+                            <li>The database stores structured records while graph logic enforces advanced prerequisite validation.</li>
+                            <li>Resolving Hibernate/MySQL configuration issues reinforced proper persistence setup and compatibility awareness.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Artifact Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="outcomes" class="section outcomes reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Program Outcomes</span>
+                    <h2>Outcome Alignment</h2>
+                </div>
+                <p class="section-intro">These five program outcomes show how the portfolio and artifact development align with collaboration, communication, computing solutions, technical tools, and security thinking.</p>
+                <div class="outcome-grid">
+                    <article class="outcome-card">
+                        <h3>1. Collaboration & Decision Making</h3>
+                        <p>Documented stakeholder communication, feedback integration, and decision-making across frontend, backend, and database work.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>2. Professional Communication</h3>
+                        <p>Presented polished narratives, code review summaries, and artifact descriptions in a professional portfolio format.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>3. Computing Solutions</h3>
+                        <p>Demonstrated algorithmic design and trade-off evaluation through graph-based prerequisite handling and system modeling.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>4. Techniques, Skills & Tools</h3>
+                        <p>Highlighted modern development techniques and tools, including React, Spring Boot, MySQL, and JPA/Hibernate.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>5. Security Mindset</h3>
+                        <p>Exhibited validation, invalid operation prevention, and correct persistence configuration as part of a secure design approach.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="deliverables" class="section deliverables reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Portfolio Assets</span>
+                    <h2>Deliverables</h2>
+                </div>
+                <p class="section-intro">Quick access to the main project assets and supporting documentation for review and capstone evaluation.</p>
+                <div class="asset-grid">
+                    <a href="#" class="asset-card">Code Review Video</a>
+                    <a href="#" class="asset-card">Original Artifact</a>
+                    <a href="#" class="asset-card">Enhanced Artifact</a>
+                    <a href="#" class="asset-card">Software Design Narrative</a>
+                    <a href="#" class="asset-card">Algorithms Narrative</a>
+                    <a href="#" class="asset-card">Databases Narrative</a>
+                    <a href="#" class="asset-card">Professional Self-Assessment</a>
+                    <a href="#" class="asset-card">GitHub Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2>Contact</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Reach Out</h3>
+                        <p>Feel free to contact me for project discussions, employer inquiries, or capstone feedback.</p>
+                        <p><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener noreferrer">github.com/your-github</a></p>
+                        <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    </div>
+                    <div class="contact-card contact-form-card">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p><strong>GitHub:</strong> github.com/your-github</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/your-profile</p>
+                <p><strong>Email:</strong> your.email@example.com</p>
+            </div>
+            <p>&copy; 2024 Portfolio. Built as an SNHU CS 499 capstone presentation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - CS 499 Capstone</title>
     <meta name="description" content="Professional portfolio website for CS 499 Capstone project">
     <link rel="stylesheet" href="styles.css">

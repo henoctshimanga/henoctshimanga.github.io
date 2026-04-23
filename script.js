@@ -1,149 +1,131 @@
-// script.js - Main JavaScript file for the portfolio website
+const THEME_KEY = 'portfolio-theme';
 
-// DOM Content Loaded - Ensure the DOM is fully loaded before running scripts
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
-    initMobileMenu();
-    initContactForm();
-    initScrollEffects();
-});
-
-// Mobile Menu Toggle Functionality
 function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
-    // Toggle mobile menu on hamburger click
-    hamburger.addEventListener('click', function() {
+    if (!hamburger || !navMenu) {
+        return;
+    }
+
+    hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
     });
 
-    // Toggle mobile menu with keyboard controls
-    hamburger.addEventListener('keydown', function(event) {
+    hamburger.addEventListener('keydown', event => {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
             navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
         }
     });
 
-    // Close mobile menu when a link is clicked
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
         });
     });
 }
 
-// Contact Form Handling
-function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
+function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+        toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+    localStorage.setItem(THEME_KEY, theme);
+}
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
+function initThemeToggle() {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    const defaultTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(defaultTheme);
 
-            // Get form data
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-
-            // Basic validation
-            if (name && email && message) {
-                // In a real application, you would send this data to a server
-                // For this static site, we'll just show an alert
-                alert(`Thank you for your message, ${name}! This is a static site, so your message hasn't been sent. Please contact me directly at your.email@example.com`);
-
-                // Reset the form
-                contactForm.reset();
-            } else {
-                alert('Please fill in all fields.');
-            }
+    const themeButton = document.getElementById('theme-toggle');
+    if (themeButton) {
+        themeButton.addEventListener('click', () => {
+            const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            setTheme(nextTheme);
         });
     }
 }
 
-// Scroll Effects and Navigation Highlighting
 function initScrollEffects() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-menu a');
 
-    // Function to highlight active navigation link based on scroll position
     function highlightNavLink() {
-        let current = '';
+        const scrollPosition = window.scrollY + window.innerHeight / 5;
+        let activeId = sections[0]?.id || '';
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
+            if (section.offsetTop <= scrollPosition) {
+                activeId = section.id;
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
-            }
+            link.classList.toggle('active', link.getAttribute('href') === '#' + activeId);
         });
     }
 
-    // Add scroll event listener for navigation highlighting
     window.addEventListener('scroll', highlightNavLink);
     highlightNavLink();
 
-    // Smooth scroll for navigation links (fallback for older browsers)
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').slice(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 }
 
-// Utility function for adding CSS classes dynamically (if needed)
-function addClass(element, className) {
-    if (element.classList) {
-        element.classList.add(className);
-    } else {
-        element.className += ' ' + className;
-    }
+function initRevealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    reveals.forEach(el => observer.observe(el));
 }
 
-// Utility function for removing CSS classes dynamically (if needed)
-function removeClass(element, className) {
-    if (element.classList) {
-        element.classList.remove(className);
-    } else {
-        element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        if (name && email && message) {
+            alert(`Thank you, ${name}! This is a static portfolio, so your message has not been sent. Please use the email address provided to contact me directly.`);
+            contactForm.reset();
+        } else {
+            alert('Please complete all fields before sending your message.');
+        }
+    });
 }
 
-// Function to handle window resize events (for responsive adjustments)
-function handleResize() {
-    // Close mobile menu if window is resized to desktop size
-    const navMenu = document.getElementById('nav-menu');
-    const hamburger = document.getElementById('hamburger');
-
-    if (window.innerWidth > 768) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
+function init() {
+    initMobileMenu();
+    initThemeToggle();
+    initScrollEffects();
+    initRevealOnScroll();
+    initContactForm();
 }
 
-// Add resize event listener
-window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', init);
