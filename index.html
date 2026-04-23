@@ -278,33 +278,34 @@
             <div class="container">
                 <div class="section-header">
                     <span class="eyebrow">Database Design</span>
-                    <h2>Persistence & Schema Migration</h2>
+                    <h2>Databases</h2>
                 </div>
                 <div class="narrative-grid">
                     <article class="narrative-card">
-                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Migration from H2 to MySQL</h4>
-                        <p>The database layer was enhanced by transitioning from an H2 in-memory database to a MySQL database using Spring Data JPA and Hibernate. This progression demonstrates moving from rapid prototyping to production-grade persistence.</p>
+                        <p>The SmartCourse Finder system was enhanced by introducing a persistent database layer. The original version relied entirely on in-memory data structures, which limited scalability and data persistence. In the enhanced version, a relational database was integrated using MySQL and Spring Data JPA.</p>
+                        <p>In the original implementation, course data was loaded from a file and stored in memory during runtime. This meant that all data was lost when the application stopped, and the system could not support real-world use cases such as data persistence, updates, or concurrent access.</p>
+                        <p>To address these limitations, the system was enhanced by integrating a MySQL database with Hibernate and Spring Data JPA. This introduced persistent storage and allowed the application to manage course data more effectively. Persistence is handled using JPA repositories, enabling CRUD operations and simplifying database interaction.</p>
                         <ul class="detail-list">
-                            <li>The initial H2 implementation supported rapid iteration and backend validation.</li>
-                            <li>Migration to MySQL introduced durable storage, schema management, and production relevance.</li>
-                            <li>JPA/Hibernate persistence maps course entities and prerequisite relationships with auto-generated schema.</li>
-                            <li>Resolving Hibernate/MySQL configuration issues reinforced proper persistence setup and compatibility awareness.</li>
+                            <li><strong>Courses table:</strong> Stores course identifiers, course titles, and core course metadata.</li>
+                            <li><strong>Course prerequisites table:</strong> Stores prerequisite relationships between courses.</li>
+                            <li><strong>JPA repositories:</strong> Support create, read, update, and delete operations through structured persistence methods.</li>
                         </ul>
+                        <p>While the database stores structured course and prerequisite data, complex logic such as cycle detection and dependency validation is handled in the application layer using graph-based algorithms. This design reflects a deliberate trade-off: the database is used for storage and retrieval, while advanced logic is handled in the application for flexibility and clarity.</p>
+                        <p>The system includes validation rules to maintain consistent and reliable data:</p>
+                        <ul class="detail-list">
+                            <li>Course number and title are required.</li>
+                            <li>A course cannot reference itself as a prerequisite.</li>
+                            <li>Prerequisites must exist before being assigned.</li>
+                            <li>Cycles in course dependencies are prevented.</li>
+                            <li>Deletion of courses required by others is restricted.</li>
+                        </ul>
+                        <p>One of the main challenges in this enhancement was configuring MySQL and Hibernate correctly. Issues related to database connectivity and dialect configuration prevented the application from starting and required careful troubleshooting. This experience highlighted the importance of proper configuration and compatibility between frameworks, as well as the role of persistence layers in full-stack systems.</p>
+                        <p>This enhancement demonstrates my ability to integrate relational databases into full-stack applications, use JPA and Hibernate for persistence, design database schemas, apply validation rules to maintain data integrity, and troubleshoot real-world configuration issues.</p>
+                        <p>Through this enhancement, I gained a deeper understanding of how databases interact with application logic. I learned that designing a system involves balancing responsibilities between the database and the application layer, and that real-world systems require careful configuration, validation, and integration to function reliably.</p>
                         <div class="card-links">
                             <a href="#" class="link-btn">View Backend Code</a>
                             <a href="#" class="link-btn">View Narratives</a>
                         </div>
-                    </article>
-                    <article class="narrative-card">
-                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Schema Design</h4>
-                        <p>The schema reflects a clear separation between structured data storage and application-level logic. While the database stores fundamental records, complex operations are handled in the application layer.</p>
-                        <ul class="detail-list">
-                            <li><strong>Courses table:</strong> Stores course_number, course_title, and core course metadata</li>
-                            <li><strong>Course prerequisites table:</strong> Links courses to their prerequisites using foreign keys</li>
-                            <li>Validation for required fields and referential integrity enforced at the database level</li>
-                            <li>Cycle detection and dependency validation handled in the application layer using graph algorithms</li>
-                        </ul>
-                        <p style="margin-top: 1rem; color: var(--muted);">This design reflects an important trade-off: the database provides structured storage, while the application layer handles advanced problem-solving logic.</p>
                     </article>
                 </div>
             </div>
