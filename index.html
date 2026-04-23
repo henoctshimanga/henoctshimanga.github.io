@@ -18,10 +18,8 @@
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#assessment">Assessment</a></li>
-                    <li><a href="#artifact">Artifact</a></li>
-                    <li><a href="#review">Enhancements</a></li>
-                    <li><a href="#outcomes">Outcomes</a></li>
-                    <li><a href="#growth">Growth</a></li>
+                    <li><a href="#review">Code Review</a></li>
+                    <li><a href="#artifact">Artifacts</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation">
@@ -36,27 +34,34 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <p class="eyebrow">CS 499 Capstone ePortfolio</p>
-                <h2>SmartCourse Finder</h2>
-                <p>A polished capstone presentation that captures professional reflection, growth, and the full evolution of a course advising artifact.</p>
-                <a href="#assessment" class="btn">Read the Assessment</a>
+                <p class="eyebrow">SNHU CS 499 Capstone</p>
+                <h2>Your Name</h2>
+                <p>Computer Science ePortfolio | Full-Stack / DevOps Engineer</p>
+                <p class="hero-intro">This portfolio presents my capstone journey through professional self-assessment, code review, and artifact evolution centered on SmartCourse Finder.</p>
+                <div class="hero-actions">
+                    <a href="#review" class="btn">View Code Review</a>
+                    <a href="#artifact" class="btn btn-secondary">View Artifacts</a>
+                    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                    <a href="#" class="btn btn-secondary">Resume</a>
+                </div>
             </div>
         </section>
 
         <section id="assessment" class="about">
             <div class="container">
                 <h2>Professional Self-Assessment</h2>
-                <div class="about-content">
+                <div class="about-content assessment-content">
                     <div class="about-text">
-                        <p>This portfolio presents my CS 499 capstone as an employable, credible effort that is more than a file dump. It begins with my self-assessment, then connects the artifact, code review, enhancements, outcome alignment, and growth.</p>
+                        <p>This capstone portfolio reflects my development as a software engineer committed to delivering artifacts that are cohesive, maintainable, and aligned with stakeholder needs.</p>
                         <ul class="assessment-list">
-                            <li>I position myself as a Full-Stack software engineer with a strong interest in DevOps, data engineering, and a future path toward cybersecurity.</li>
-                            <li>I evaluate the project for maintainability, architecture, user value, and technical maturity while highlighting the original and enhanced artifacts.</li>
-                            <li>My professional goal is to deliver solutions with clear narrative, strong engineering judgment, and relevance to industry trends.</li>
+                            <li>I have grown through coursework by applying rigorous software engineering practices, system design thinking, and structured problem solving.</li>
+                            <li>Collaboration has been essential: I improved communication with stakeholders, integrated feedback loops, and coordinated decisions across frontend, backend, and database work.</li>
+                            <li>My work emphasizes data structures and algorithms through graph-based course dependency modeling, prerequisite traversal, and cycle detection logic.</li>
+                            <li>Software engineering improvements include modular architecture, API design, validation rules, and a professional full-stack delivery path.</li>
+                            <li>Database experience is shown through MySQL persistence, JPA schema mapping, referential integrity, and practical configuration troubleshooting.</li>
+                            <li>A security mindset is part of the artifact: I enforce validation rules, prevent invalid course references, and handle persistence safely rather than relying on a simple in-memory proof of concept.</li>
                         </ul>
-                    </div>
-                    <div class="about-image">
-                        <img src="media/profile-placeholder.jpg" alt="Professional portrait placeholder" width="220" height="220">
+                        <p class="assessment-summary">Together, the artifacts demonstrate how the original C++ console application evolved into an interconnected full-stack solution where frontend, backend, and data management work together to support smarter course advising.</p>
                     </div>
                 </div>
             </div>
@@ -64,24 +69,28 @@
 
         <section id="artifact" class="artifact">
             <div class="container">
-                <h2>Main Artifact</h2>
-                <div class="artifact-grid">
-                    <article class="artifact-card">
-                        <h3>Original SmartCourse Finder</h3>
-                        <p>Developed in C++ as a console-based course management and advising system. It loaded course data from a file, stored courses in memory, displayed available courses, and supported course lookup and prerequisite viewing.</p>
+                <h2>Artifact Overview</h2>
+                <p class="section-intro">SmartCourse Finder is the core artifact that bridges original implementation and full-stack enhancements across frontend, backend, and database dimensions.</p>
+                <div class="comparison-grid">
+                    <article class="comparison-panel">
+                        <h3>Original</h3>
+                        <p>Built as a C++ console application, SmartCourse Finder loaded course data from files, stored courses in memory, supported search, and displayed prerequisites.</p>
                         <ul class="detail-list">
-                            <li>File-backed course data ingestion</li>
-                            <li>In-memory storage and retrieval</li>
-                            <li>Search and prerequisite display</li>
+                            <li>Console-based interface</li>
+                            <li>Flat in-memory course storage</li>
+                            <li>File-driven data loading</li>
+                            <li>Basic course lookup and prerequisite viewing</li>
                         </ul>
                     </article>
-                    <article class="artifact-card">
-                        <h3>Enhanced SmartCourse Finder</h3>
-                        <p>Rebuilt into a full-stack application using React frontend and Spring Boot backend. It now supports persistent theme state, graph-based prerequisite logic, MySQL/JPA persistence, and robust validation rules.</p>
+                    <article class="comparison-panel enhanced">
+                        <h3>Enhanced</h3>
+                        <p>Rebuilt into a React + Spring Boot full-stack application with persistent theme state, graph-based prerequisite logic, and MySQL/JPA persistence.</p>
                         <ul class="detail-list">
-                            <li>React UI with light/dark mode toggle</li>
-                            <li>Spring Boot backend with RESTful services</li>
-                            <li>MySQL database via Hibernate/JPA</li>
+                            <li>Modern React frontend with light/dark theme</li>
+                            <li>Spring Boot REST API and validation
+</li>
+                            <li>MySQL persistence with Hibernate/JPA</li>
+                            <li>Graph-based prerequisite validation and traversal</li>
                         </ul>
                     </article>
                 </div>
@@ -90,20 +99,25 @@
 
         <section id="review" class="projects">
             <div class="container">
-                <h2>Code Review & Enhancements</h2>
+                <h2>Code Review</h2>
+                <p class="section-intro">This code review captures the artifact’s current functionality, identifies opportunities for improvement, and outlines planned enhancements for reliability and extensibility.</p>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Frontend Enhancements</h3>
-                        <p>Added theme persistence and modern UI patterns with React. Verified the build with <code>npm run build</code> to ensure the user experience is stable and production-ready.</p>
+                        <h3>Existing Functionality</h3>
+                        <p>The system supports course management, prerequisite lookup, theme persistence, and full-stack data flow between React, Spring Boot, and MySQL.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Backend Enhancements</h3>
-                        <p>Implemented Spring Data JPA repositories, validation logic, and MySQL persistence. I resolved a MySQL/Hibernate dialect compatibility startup issue, which reinforced the importance of accurate database configuration.</p>
+                        <h3>Identified Weaknesses</h3>
+                        <p>Areas for refinement include stronger error handling, clearer API contract documentation, deeper security controls, and enhanced user guidance for invalid course operations.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Algorithmic Enhancements</h3>
-                        <p>Moved beyond flat lookups by modeling course relationships as a graph. The system supports prerequisite validation, traversal logic, cycle rejection, and topological ordering for course dependency analysis.</p>
+                        <h3>Planned Enhancements</h3>
+                        <p>Planned work focuses on improved validation, user feedback, database transaction handling, better edge-case handling for prerequisite graphs, and production-ready deployment readiness.</p>
                     </div>
+                </div>
+                <div class="video-placeholder">
+                    <a href="#" class="btn btn-secondary">View Review Video</a>
+                    <p>Placeholder for an external code review or demonstration video link.</p>
                 </div>
             </div>
         </section>
