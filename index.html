@@ -20,6 +20,10 @@
                     <li><a href="#assessment">Assessment</a></li>
                     <li><a href="#review">Code Review</a></li>
                     <li><a href="#artifact">Artifacts</a></li>
+                    <li><a href="#design">Software Design</a></li>
+                    <li><a href="#algorithms">Algorithms</a></li>
+                    <li><a href="#databases">Databases</a></li>
+                    <li><a href="#outcomes">Program Outcomes</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation">
@@ -87,8 +91,7 @@
                         <p>Rebuilt into a React + Spring Boot full-stack application with persistent theme state, graph-based prerequisite logic, and MySQL/JPA persistence.</p>
                         <ul class="detail-list">
                             <li>Modern React frontend with light/dark theme</li>
-                            <li>Spring Boot REST API and validation
-</li>
+                            <li>Spring Boot REST API and validation</li>
                             <li>MySQL persistence with Hibernate/JPA</li>
                             <li>Graph-based prerequisite validation and traversal</li>
                         </ul>
@@ -122,50 +125,99 @@
             </div>
         </section>
 
-        <section id="outcomes" class="skills">
+        <section id="design" class="narrative">
             <div class="container">
-                <h2>Program Outcomes Alignment</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Software Design & Engineering</h3>
-                        <p>Designed a maintainable full-stack architecture with clear separation of frontend, backend, and persistence layers.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Algorithms & Data Structures</h3>
-                        <p>Applied graph-based logic, DFS/BFS traversal, and topological sort to manage course prerequisites and detect invalid dependency cycles.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <p>Built a MySQL schema with Hibernate/JPA, enforced referential integrity, and applied validation rules for data quality.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Professional Practice</h3>
-                        <p>Documented a cohesive narrative and reflected critically on technical decisions, compatibility issues, and project evolution.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Quality & Validation</h3>
-                        <p>Verified frontend builds, enforced business rules, blocked invalid deletions, and rejected prerequisite cycles to preserve system integrity.</p>
-                    </div>
+                <h2>Software Design & Engineering</h2>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The original C++ console design focused on a straightforward course advising workflow with file-based course loading, in-memory storage, and prerequisite display. The enhanced version transitioned this architecture into a full-stack application with a clear separation between frontend and backend responsibilities.</p>
+                        <ul class="detail-list">
+                            <li>Original console design offered simple interaction but limited extensibility.</li>
+                            <li>Full-stack evolution introduced React frontend, Spring Boot backend, and stronger modularity.</li>
+                            <li>Frontend/backend separation improved maintainability and allowed independent UI and service enhancements.</li>
+                            <li>Usability improvements include a modern interface and theme toggle to support user preference.</li>
+                            <li>Modularity and maintainability were strengthened by breaking the application into explicit layers and reusable components.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Original Code</a>
+                            <a href="#" class="link-btn">Enhanced Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="growth" class="contact">
+        <section id="algorithms" class="narrative">
             <div class="container">
-                <h2>Growth Highlights</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Software Design</h3>
-                        <p>Improved system architecture, increased modularity, and built an application that reflects professional engineering standards.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Algorithms & Data Structures</h3>
-                        <p>Enhanced course dependency handling with graph traversal, validation, and ordering techniques that extend beyond simple lookup tables.</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <p>Transitioned from in-memory testing to MySQL persistence, including schema design, JPA mapping, and practical understanding of database configuration.</p>
-                    </div>
+                <h2>Algorithms & Data Structures</h2>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The original implementation used a flat lookup structure, which was adequate for simple course search but limited the system’s ability to manage complex prerequisite relationships. The enhanced artifact adopts graph-based handling to model courses and prerequisites more naturally.</p>
+                        <ul class="detail-list">
+                            <li>Flat lookup designs were easy to implement but struggled with dependency traversal and validation.</li>
+                            <li>Graph-based course relationships support richer prerequisite logic and dependency analysis.</li>
+                            <li>Prerequisite traversal enables validation of course sequences and supports navigation of course dependencies.</li>
+                            <li>Topological ordering helps determine valid course progression and identify cycles.</li>
+                            <li>The enhanced logic is more structured, maintainable, and aligned with real advising requirements.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Artifact Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="databases" class="narrative">
+            <div class="container">
+                <h2>Databases</h2>
+                <div class="narrative-grid">
+                    <article class="narrative-card">
+                        <p>The database journey began with H2 in-memory storage for initial testing and moved to MySQL with JPA/Hibernate for production-grade persistence. The design separates database storage from application-level graph logic so the database holds structured records while the application enforces advanced prerequisite rules.</p>
+                        <ul class="detail-list">
+                            <li>Initial H2 implementation allowed rapid prototyping and backend testing.</li>
+                            <li>Migration to MySQL introduced durable persistence, real schema management, and production relevance.</li>
+                            <li>Hibernate/JPA persistence supports course and prerequisite mappings with auto-generated schema.</li>
+                            <li>The schema includes `courses` and `course_prerequisites` tables with validation for course existence and ordering.</li>
+                            <li>Database storage is distinct from graph-based application logic, which governs advanced prerequisite validation and cycle detection.</li>
+                            <li>I also resolved a Hibernate/MySQL configuration challenge, reinforcing the importance of correct dialect and persistence settings.</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#" class="link-btn">Artifact Code</a>
+                            <a href="#" class="link-btn">Narrative Document</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="outcomes" class="outcomes">
+            <div class="container">
+                <h2>Program Outcomes</h2>
+                <p class="section-intro">These five program outcomes show how my portfolio and artifacts demonstrate collaboration, communication, computing design, technical skills, and security thinking.</p>
+                <div class="outcome-grid">
+                    <article class="outcome-card">
+                        <h3>1. Collaboration & Decision Making</h3>
+                        <p>The portfolio describes stakeholder communication, feedback integration, and engineering decisions made across frontend, backend, and persistence layers.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>2. Professional Communication</h3>
+                        <p>The site presents polished narratives, code review insights, and artifact summaries that reflect professional-quality documentation and storytelling.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>3. Computing Solutions</h3>
+                        <p>SmartCourse Finder demonstrates algorithmic trade-offs, graph-based solution design, and evaluation of course dependency approaches.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>4. Techniques, Skills & Tools</h3>
+                        <p>The portfolio highlights React, Spring Boot, MySQL, JPA/Hibernate, and modern software engineering practices used to build and enhance the artifact.</p>
+                    </article>
+                    <article class="outcome-card">
+                        <h3>5. Security Mindset</h3>
+                        <p>The artifact incorporates validation, invalid operation protection, and an explicit focus on safe persistence and configuration handling.</p>
+                    </article>
                 </div>
             </div>
         </section>
