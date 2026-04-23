@@ -8,5 +8,6 @@ target/
 *.mov
 *.avi
 *.mkv
+*.m4v
 *.log
 .env
