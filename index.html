@@ -240,33 +240,32 @@
             <div class="container">
                 <div class="section-header">
                     <span class="eyebrow">Algorithms & Data Structures</span>
-                    <h2>Graph-Based Logic</h2>
+                    <h2>Algorithms and Data Structures</h2>
                 </div>
                 <div class="narrative-grid">
                     <article class="narrative-card">
-                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Graph-Based Approach</h4>
-                        <p>The system uses graph-based data structures to model course relationships. Each course is treated as a node, and prerequisites are represented as directed edges. This approach improves accuracy and scalability compared to a flat lookup model.</p>
+                        <p>The SmartCourse Finder system was enhanced to improve how course relationships are represented and processed. The original version relied on simple data storage and lookup, which limited its ability to handle complex prerequisite logic.</p>
+                        <p>In the original implementation, courses and prerequisites were treated as flat data. While this allowed basic retrieval, it did not accurately model the relationships between courses, making it difficult to validate dependencies or generate valid course sequences.</p>
+                        <p>To address this limitation, the system was enhanced using graph-based data structures. Each course is represented as a node, and prerequisite relationships are modeled as directed edges between nodes. This structure allows the system to represent dependencies more accurately and efficiently.</p>
                         <ul class="detail-list">
-                            <li>Flat lookup could not easily support multi-step prerequisite resolution or cycle detection.</li>
-                            <li>Graph-based course relationships capture dependencies naturally and support traversal.</li>
-                            <li>Prerequisite traversal validates course sequences and supports logical progression.</li>
-                            <li>Topological ordering helps identify valid course pathways and detect dependency cycles.</li>
+                            <li>Validate prerequisite relationships.</li>
+                            <li>Detect cycles in course dependencies.</li>
+                            <li>Traverse course relationships using depth-first and breadth-first search.</li>
+                            <li>Generate a valid course completion order using topological sorting.</li>
+                        </ul>
+                        <p>This enhancement demonstrates my ability to apply graph data structures to real-world problems, implement traversal algorithms such as DFS and BFS, design logic for dependency resolution, and improve system accuracy and scalability through better data modeling.</p>
+                        <p>This approach introduces additional complexity compared to simple data structures, but it provides significantly more flexibility and accuracy when handling course dependencies. It also shifts part of the system's logic from simple data storage to structured algorithmic processing, which is necessary for solving complex relationship-based problems.</p>
+                        <p>Through this enhancement, I learned how to apply abstract data structures to practical problems. Modeling course relationships as a graph helped me understand how algorithms can be used to enforce rules, validate data, and generate meaningful results in real-world systems.</p>
+                        <ul class="detail-list">
+                            <li>Applied graph data structures to model course and prerequisite relationships.</li>
+                            <li>Used traversal algorithms to support dependency validation and relationship exploration.</li>
+                            <li>Used topological sorting to produce valid course ordering and identify invalid dependency structures.</li>
+                            <li>Balanced added algorithmic complexity against stronger accuracy, scalability, and maintainability.</li>
                         </ul>
                         <div class="card-links">
                             <a href="#" class="link-btn">View Backend Code</a>
                             <a href="#" class="link-btn">View Narratives</a>
                         </div>
-                    </article>
-                    <article class="narrative-card">
-                        <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Algorithms in Action</h4>
-                        <p>The application implements several key algorithms to ensure correctness and performance:</p>
-                        <ul class="detail-list">
-                            <li><strong>Validate prerequisite relationships:</strong> Ensures courses reference valid prerequisites</li>
-                            <li><strong>Detect cycles:</strong> Identifies circular dependencies that would create impossible sequences</li>
-                            <li><strong>Topological sorting:</strong> Generates valid course order respecting all prerequisites</li>
-                            <li><strong>Graph traversal:</strong> Uses depth-first and breadth-first search to explore dependencies</li>
-                        </ul>
-                        <p style="margin-top: 1rem; color: var(--muted);">This algorithmic foundation strengthens the system's ability to handle complex prerequisite scenarios and provide reliable course planning recommendations.</p>
                     </article>
                 </div>
             </div>
